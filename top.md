@@ -114,17 +114,70 @@ Columns:
 
 ---
 
-# 💬 One-line summary
+# 🧠 What this lesson is trying to teach
 
-👉 The blog is teaching:
-**“How to monitor system performance and processes using the top command.”**
-
----
-
-# 🧠 Super simple way to remember
-
-* `top` = **Task Manager of Linux**
+👉 **You don’t always need to press keys inside `top` — you can start it with settings already applied**
 
 ---
 
+# ⚙️ Instead of doing this inside `top`:
+
+* Press `M` → sort by memory
+* Press `c` → show full path
+* Press `u` → filter user
+
+👉 You can do it directly while starting `top`
+
+---
+
+# 🚀 Examples
+
+### 1. Sort by memory
+
+```bash
+top -o %MEM
+```
+
+👉 Same as pressing `M` inside `top`
+👉 Shows highest memory usage first
+
+---
+
+### 2. Show full command path
+
+```bash
+top -c
+```
+
+👉 Shows:
+
+```
+/usr/bin/python script.py
+```
+
+instead of just:
+
+```
+python
+```
+
+---
+
+### 3. Show processes of a user
+
+```bash
+top -u root
+```
+
+👉 Shows only processes owned by `root`
+
+# 🧠 Simple memory trick
+
+👉
+
+* `-o` → order
+* `-c` → command path
+* `-u` → user
+
+---
 
